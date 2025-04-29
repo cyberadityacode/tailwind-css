@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Container</title>
+</head>
+<body>
+    <div class="bg-orange-950">
+        <ul class="flex justify-around  md:justify-end [&>*]:p-4 [&>*]:text-white [&>*]:hover:bg-orange-200 transition-all duration-1000 ease-in ">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Login</li>
+        </ul>
+
+    </div>
+
+    <div class="text-3xl bg-orange-500 container mx-auto">
+        Container Class
+    </div>
+</body>
+</html>
+
+<!-- 
+
+In Tailwind CSS, the .container class is a special utility that sets a max-width at different breakpoints and centers the content by default.
+
+Here’s a basic idea:
+
+html
+Copy
+Edit
+<div class="container mx-auto">
+   Your content -->
+<!-- </div> -->
+<!-- container: applies responsive max-width at each screen size (sm, md, lg, xl, 2xl).
+
+mx-auto: (optional but common) horizontally centers the container.
+
+By default, container behaves like this:
+
+
+Breakpoint	Max-Width
+none	100%
+sm	640px
+md	768px
+lg	1024px
+xl	1280px
+2xl	1536px
+
+breakpoint means a specific screen width where the design/layout changes to make the website look good on different devices.
+
+Simple meaning:
+👉 Breakpoints = "At this screen size, apply these styles."
+
+For example:
+
+sm (small) is usually around 640px → for mobile phones.
+
+md (medium) is 768px → for tablets.
+
+lg (large) is 1024px → for small laptops.
+
+xl (extra large) is 1280px → for desktops. -->
+

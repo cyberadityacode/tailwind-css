@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Background Classes</title>
+  </head>
+  <body>
+    <!-- <div class="bg-red-400 size-96 bg-no-repeat bg-contain  " style="background-image: url(kailash.jpg) ;">
+        Hello tailwind
+    </div> -->
+
+    <div
+      class="bg-red-400 h-96 bg-[url(kailash.jpg)] bg-no-repeat bg-center bg-contain"
+    >
+      Hello Tailwind
+    </div>
+
+    <!-- to use gradient -->
+    <!-- simple english- bg-gradient-to-b from-red-900 to-blue-500 size-96 -->
+    <div class="bg-gradient-to-b to-blue-500 from-red-900 size-96">adad</div>
+
+    <!-- take ex of left to right -->
+    <div class="bg-gradient-to-r from-red-800 to-blue-900 size-96">
+      left to right
+    </div>
+
+    <!-- take diagonal -->
+    <div class="bg-gradient-to-tr from-red-800 to-blue-900 size-96">
+      bottom left to top right
+    </div>
+<!-- outer shadow -->
+    <div class="size-96 m-32 shadow-[#556bb3]-400 shadow-2xl">
+
+    </div>
+
+    <div class="size-96 m-32 shadow-inner shadow-orange-500">
+
+    </div>
+  </body>
+</html>

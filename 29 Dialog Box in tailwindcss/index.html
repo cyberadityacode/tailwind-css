@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Dialog Box</title>
+</head>
+<body class="relative h-screen ">
+  
+   <!-- Page Content Wrapper -->
+  <div id="pageContent" class="h-full transition-all duration-300">
+    <div class="p-10">
+      <button id="something" class="bg-blue-500 text-white p-3 rounded hover:bg-blue-700">
+        Something
+      </button>
+    </div>
+  </div>
+        
+    
+
+    <div id="dialog" class="hidden fixed inset-0 z-50">
+        <!-- bg overlay -->
+
+        <!-- <div class="bg-gray-500 fixed inset-0"></div> -->
+
+        <!-- dialog content -->
+        <div class="flex h-full justify-center items-center">
+            <div class="bg-white w-[512px] text-left shadow-xl rounded relative">
+                <div class="p-5">
+                    <div class="flex items-start">
+                        <img class="size-20" src="images/delete.png" alt="">
+                        <div class="ml-2">
+                            <h2 class="font-semibold">Deactivate Account</h2>
+                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel!</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="bg-gray-200 flex justify-end p-2">
+                    <button type="button" class="bg-red-500 text-white hover:bg-red-900 p-2 rounded mx-2">Deactivate</button>
+                    <button id="close" type="button" class="bg-stone-500 text-white hover:bg-stone-900 p-2 rounded mx-2">Cancel</button>
+                    <!-- <button class="bg-stone-300 text-white hover:bg-red-600 p-2 rounded mx-2>Cancel</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const something = document.getElementById('something');
+    const dialog = document.getElementById('dialog');
+    const pageContent = document.getElementById('pageContent');
+    const close = document.getElementById('close');
+
+    something.addEventListener('click', () => {
+      dialog.classList.remove('hidden');
+      pageContent.classList.add('opacity-50', 'bg-stone-300');
+    });
+
+    close.addEventListener('click', () => {
+      dialog.classList.add('hidden');
+      pageContent.classList.remove('opacity-50', 'bg-stone-300');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Directives</title>
+</head>
+<body>
+    <h1>Custom h1 directive set by extending base class in style.css via @layer</h1>
+    <p>@tailwind base;	Injects Tailwind’s base styles (like resets and typography defaults)</p>
+
+    <!-- You can create your own custom tag by extending base class layer on style.css -->
+    <aditya>Custom aditya</aditya>
+
+
+    <h2>custom h2 using tailwindcss customization</h2>
+    <hr>
+    <cyberaditya>custom cyberaditya tag with tailwindcss</cyberaditya>
+
+    <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">login like bootstrap</button>
+    <button class="primary-btn">Custom primary-btn</button>
+</body>
+</html>
+
+<!-- 
+In TailwindCSS, "directives" usually refer to special @-prefixed commands used inside your CSS files when you are writing custom CSS (especially with a tool like PostCSS). These directives tell Tailwind to inject its utilities, components, or base styles into your final CSS during the build process.
+
+The three most common Tailwind directives are:
+
+
+Directive	Meaning
+@tailwind base;	Injects Tailwind’s base styles (like resets and typography defaults)
+@tailwind components;	Injects Tailwind’s component classes (like buttons, forms)
+@tailwind utilities;	Injects all of Tailwind’s utility classes (like p-4, text-center)
+
+
+-->

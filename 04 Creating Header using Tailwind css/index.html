@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Tailwindcss Header</title>
+  </head>
+  <body>
+    <!-- <ul class="bg-black text-white m-0 flex">
+      <li class="flex"><a class="p-3 hover:bg-zinc-400" href="">Home</a></li>
+      <li class="flex"><a class="p-3 hover:bg-zinc-400" href="">About</a></li>
+      <li class="flex"><a class="p-3 hover:bg-zinc-400" href="">Contact</a></li>
+    </ul> -->
+
+    <!-- how to apply class to child elements from parent 
+        ex. parent ul has flex, instead of manually adding flex class to 
+        each li element. apply from parent itselves 
+        [&>*]:flex  ie. flex[and descendant all]
+    -->
+
+    <ul class="bg-black text-white m-0 flex [&>*]:flex">
+      <li ><a class="p-3 hover:bg-zinc-400" href="">Home</a></li>
+      <li ><a class="p-3 hover:bg-zinc-400" href="">About</a></li>
+      <li ><a class="p-3 hover:bg-zinc-400" href="">Contact</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Heigth min-max</title>
+</head>
+<body class="h-screen">
+    
+    <h1 class="bg-green-200">Without Height</h1>
+    <!--120 px height -->
+    <h1 class="bg-red-300 h-30 ">With custom Height in tailwind css</h1>
+
+    <!-- Now if you want full height 
+        use h-full, but that won't work unless you 
+        put h-screen to its parent 
+    -->
+    <!-- this wont work  -->
+    <h1 class="bg-yellow-300 h-full ">full height without setting h-screen on parent</h1> 
+    
+    <!-- this will work -->
+    
+    <h1 class="bg-yellow-300 h-full ">full height by setting h-screen on parent</h1> 
+
+    <!-- 
+    What is h-screen
+
+
+    h-screen makes the element as tall as the entire screen (browser window).
+
+Even if the page has less content, the element will still take up full height.
+    h-screen is great for:
+
+Landing pages
+
+Hero sections
+
+Full-page modals
+
+If you want half screen, you can combine h-1/2 or use custom heights!
+
+Summary:
+
+h-screen = height: 100% of viewport height (100vh) = full screen height
+
+    -->
+
+<!-- to apply height on 50% of the screen -->
+
+<h1 class="bg-pink-300 h-1/2">50% occupancy</h1>
+
+<!-- 
+the absolute beauty is that it works stunning on mobile too... 
+-->
+<h1 class="bg-green-300 h-1/5">20% occupancy</h1>
+
+
+<div class="  flex h-48 w-8 items-end justify-center bg-blue-500 hover:bg-blue-950 rounded-t-2xl" >
+    <span class="rotate-90 text-left text-nowrap mb-3 ">h-40</span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<!-- 
+
+Difference between h-screen (vh) and dynamic viewport height(h-dvw)
+
+Situation	h-screen (vh)	h-dvw (dvh)
+On load	Looks fine	Looks fine
+After scroll	Leaves gap at bottom	Perfectly fits screen
+🧠 In Short:
+h-screen good for desktop and simple pages.
+
+h-dvw awesome for responsive mobile screens, where address bars shift.
+
+
+Is it safe to use h-dvw on desktop?
+Yes! It won't break anything on desktop sites; 
+it will behave just like h-screen. 
+However, if you want to ensure the element’s height always adjusts properly 
+for both desktop and mobile, you might consider adding fallbacks:
+
+First try using dynamic viewport height
+<div class="h-dvw md:h-screen bg-blue-400">
+    Content here...
+  </div>
+
+
+  For small screens (mobile), h-dvw will be used (dynamic).
+
+For larger screens (desktop), h-screen will act as a fallback, ensuring the height is stable.
+-->
+
+<div class="bg-pink-400 h-10 max-h-50">
+    max-height
+</div>
+<!-- in the below case, h-10 won't work because min height is set to 50 
+ but if you set h-70, it will exceed-->
+<div class="bg-blue-400 h-10 min-h-50">
+    min-height
+</div>
+
+<!-- 
+h-screen vs h-full
+
+Class	CSS Equivalent	Meaning
+h-screen	height: 100vh;	Sets the height of an element to 100% of the viewport height (the visible height of the browser window).
+h-full	height: 100%;	Sets the height of an element to 100% of its parent’s height.
+
+
+
+-->
+
+
+</body>
+</html>

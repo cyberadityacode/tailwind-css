@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>07 Mastering Margin and Padding</title>
+</head>
+<body>
+    <h1 >07 Mastering Margin and Padding</h1>
+    
+    <!-- if you leave space between multiple span tags it will be reflected on the page -->
+
+    <!-- mt-3 margin top won't work with span because its inline-inline by default 
+    padding left and right will work in span or other inline-inline elements
+    but, margin top and margin bottom won't,  albeit, you may apply margin left and margin right it works fine!
+    -->
+    <span class="bg-red-300 pl-4 ml-6  ">Span with Margin and Padding</span><span class="bg-red-300 p-2 ml-2 ">Another Span</span>
+
+    <!-- if class range is absent for any property, you may use custom range declaration
+    let say for 1px, however p-px will do wonder for 1px 
+    -->
+
+    <h1 class="bg-red-700 p-[1px] mt-[1px]">custom margin or padding </h1>
+    <br>
+    <br>
+    
+
+
+
+<!-- 
+to apply padding just type p-range
+range varies from 0.5 (2px), 1 (4px) to 96 (384px)
+but to apply 1px padding use p-px
+in Earlier tailwind version 3 -> their was limitation in range because eg. after 20, 24 then 28 comes
+so, if you want to apply p-25 = this wasn't possible, 
+thanks to tailwind version 4 -> p-rangeNumber can dynamically generate class based on that ref range
+
+Now classes are dynamically generated, it doesn't care about range limitation anymore
+-->
+    <h1 class="bg-red-950 text-white p-1">Heading Tag with Padding</h1>
+
+
+    <!-- m-1 applies margin of 4px in all directions i.e, top right bottom left i.e, it get applied in multiple of 4 -->
+    <h1 class="bg-rose-300 p-1 m-1">Heading Tag with padding and margin</h1>
+
+    <!-- Applying padding on x-axis, i.e, left and right simultaneosly -->
+    <h1 class="bg-cyan-300 px-2 m-2">Heading Tag with padding on x-axis-2 ie, padding left and right and margin</h1>
+
+    <!-- applying padding on y-axis, i.e, padding top and padding bottom -->
+    <h1 class="bg-cyan-300 py-2 m-2">Heading Tag with padding on y-axis-2 ie, padding top and bottom and margin</h1>
+
+    <!-- for margin top and bottom of 2.5 *4 = 10px -->
+     <h1 class="bg-green-300 px-3 py-4 m-2.5">Margin top and Bottom 10px</h1>
+        <p>something</p>
+
+    <!-- for padding top only -->
+    <h1 class="bg-amber-200 pt-2">Padding Top Only</h1>
+    <!-- for margin top only 8px-->
+    <h1 class="bg-amber-200 mt-2">Margin Top Only</h1>
+
+    <!-- If you want to apply padding(8px) and margin(16px) on left side -->
+     <h1 class="bg-purple-300 pl-2 ml-4">Padding and Margin on left side</h1>
+    <!-- If you want to apply padding(8px) and margin(16px) on right side -->
+     <h1 class="bg-sky-800 pr-2 mr-4">Padding and Margin on right side</h1>
+    
+    <!-- to apply padding bottom of 8px and margin bottom of 16px -->
+     <h1 class="bg-amber-200 pb-2 mb-4">Padding and Margin on bottom</h1>
+     <h1>Some Random text</h1>
+</body>
+</html>
+
+
+<!-- 
+In CSS (and HTML), <h1> is a block-level element by default.
+
+What that means:
+It takes up the full width of its parent container.
+
+It forces a line break before and after itself.
+
+You can control its layout easily using block properties like width, margin, padding, etc.
+
+
+if you alter the property of display to inline in h1
+Then it would behave like an inline element (no full-width, no forced new line).
+
+
+<span> is an inline element by default in HTML and CSS.
+
+What that means:
+It does not start on a new line.
+
+It only takes up as much width as its content needs.
+
+It’s mainly used to style small parts of text inside block elements.
+-->
+
+<!-- 
+on a lighter note, if a person occupies full desk and doesn't let sit anyone in it- he is block
+
+if a junior occupies the desk he lets anyone sits while compromising his comfort.
+
+in  a block elements we have good styling control i.e,  properties like width, height and margin can easily be applied
+in an inline its Limited (no width/height unless made inline-block)
+
+
+You can also force a <span> to behave like a block element using:
+
+    display:block
+    it will behave like h1 and div
+
+
+
+    Difference between block, inline, inline-block:
+block
+→ Full width.
+→ Forces new line.
+→ Can set width, height, padding, margin easily.
+
+inline
+→ Flows with text (like words).
+→ You cannot set width or height easily.
+→ Just good for styling inside sentences.
+
+inline-block
+→ Flows like inline (no new line)
+→ But you can set width, height, padding, margins like a block!
+→ It's a mix of inline's flow + block's styling powers.
+
+Block = Full-width building.
+🧵 Inline = Words in a sentence.
+🛍️ Inline-block = Little boxes inside a sentence.
+-->

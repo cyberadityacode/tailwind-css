@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Position in tailwind</h1>
+
+    <!-- if you want to position that element to the bottom right
+     apply position:absolute, bottom:0 -->
+    <!-- <div class="bg-pink-200 size-52 absolute bottom-0 right-0 "></div> -->
+
+    <!-- Now, i want similar div on top right -->
+    <!-- <div class="bg-pink-900 size-52 absolute top-0 right-0 "></div> -->
+    <!-- Now, i want similar div on bottom left -->
+    <!-- <div class="bg-pink-300 size-52 absolute bottom-0 left-0 "></div> -->
+    <!-- Now, i want similar div on Top left -->
+    <!-- <div class="bg-pink-600 size-52 absolute top-0 left-0 "></div> -->
+
+    <!-- Now if you want the above 4 box should come inside another div box -->
+
+    <div class="bg-red-800 size-96 relative">
+      <div class="bg-pink-200 size-20 absolute bottom-0 right-0"></div>
+      <div class="bg-pink-200 size-20 absolute top-0 right-0"></div>
+      <div class="bg-pink-200 size-20 absolute bottom-0 left-0"></div>
+      <div class="bg-pink-200 size-20 absolute top-0 left-0"></div>
+    </div>
+    <!-- fixed position example -->
+    <div class="bg-blue-500 size-96">
+      <h1 class="bg-blue-950 text-white fixed z-20">fixed text on its parent</h1>
+    </div>
+    <div class="bg-green-300 size-96 relative ">
+      <div class="bg-red-200 size-20 absolute inset-20"></div>
+    </div>
+
+    <div class="bg-green-100 size-96 "></div>
+
+    <!-- 
+    
+ Purpose of inset:
+It quickly tells the browser how far an element should be from the top, right, bottom, and left sides — all in one line.
+
+Instead of writing:
+
+css
+Copy
+Edit
+top: 10px;
+right: 20px;
+bottom: 30px;
+left: 40px;
+You can simply write:
+
+css
+Copy
+Edit
+inset: 10px 20px 30px 40px;
+👉 It saves time, saves space, and makes code cleaner.
+
+
+
+-->
+
+    <!-- 
+https://chatgpt.com/c/680df555-ceac-8009-8ce0-127a3e4ccb70
+The position property tells the browser how an element should be placed on the page.
+
+It decides where and how an element should sit compared to the other things around it.
+
+🌟 Types of position in CSS (with easy explanation):
+There are five types:
+
+
+Position Type	What It Means (Easy Version)
+static (default)	The element just sits normally in the flow (like normal text and images).
+relative	The element stays in the normal flow, but you can move it a little (using top, right, bottom, left).
+absolute	The element leaves the normal flow and sticks itself to the nearest positioned ancestor (or the page if none).
+fixed	The element sticks to the screen, even when you scroll (like a sticky navbar).
+sticky	The element acts normal at first, but sticks to a spot when you scroll past it.
+🌟 Easy Short Examples:
+1. static
+css
+Copy
+Edit
+div {
+  position: static;
+}
+➡️ Default. Element flows normally.
+
+2. relative
+css
+Copy
+Edit
+div {
+  position: relative;
+  top: 10px;
+}
+➡️ Moves 10px down from where it was, but still leaves its original space.
+
+3. absolute
+css
+Copy
+Edit
+div {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+➡️ Placed exactly 20px from top and 30px from left, ignores normal flow.
+
+4. fixed
+css
+Copy
+Edit
+div {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+➡️ Always stuck to the top-left of the screen — even when you scroll.
+
+5. sticky
+css
+Copy
+Edit
+div {
+  position: sticky;
+  top: 0;
+}
+➡️ Scrolls normally at first, but when it touches 0px from top, it sticks there.
+
+🌟 Super Quick Memory Trick:
+static = normal
+
+relative = normal + adjustable
+
+absolute = out of flow, free to place
+
+fixed = glued to screen
+
+sticky = scrolls then sticks
+
+
+-->
+
+<!-- 
+In CSS, every element (like a div, button, h1, etc.) is treated like a rectangle box.
+
+This box has 4 parts (from inside to outside):
+
+lua
+Copy
+Edit
++-------------------------------+
+|          Margin               |
+|  +-------------------------+  |
+|  |        Border            |  |
+|  |  +---------------------+ |  |
+|  |  |    Padding           | |  |
+|  |  |  +-----------------+ | |  |
+|  |  |  |   Content        | | |  |
+|  |  |  +-----------------+ | |  |
+|  |  +---------------------+ |  |
+|  +-------------------------+  |
++-------------------------------+
+Super Quick Memory Trick:
+Content → Padding → Border → Margin
+
+Like:
+"First fill the box (content), then make it cozy (padding), wrap it up (border), then give it breathing space (margin)!" ✨
+
+
+-->
+
+
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Size Class</title>
+</head>
+<!-- <body > -->
+<body class="h-screen">
+    <h1>Size Class in Tailwindcss</h1>
+
+    <div class="w-50 h-50 bg-pink-400">w-50 h-50 </div>
+    <!-- when you want to create a box of same width and height
+     you can use size class -->
+    <div class="size-50 bg-orange-600">size-50</div>
+
+    <!-- caveat- min and max doesn't work with size class
+     it works with width and height only -->
+
+    <!-- size-1/2 will create box of 50% x50% but, 
+     it won't reflect on screen until you apply
+     h-screen on its parent -->
+    <!-- <div class="size-1/2 bg-cyan-600">size-1/2 works fine with h-screen on parent</div> -->
+    
+    
+    <div class="size-fit bg-cyan-600">size-fit as per content</div>
+    
+    
+    <div class="size-full bg-cyan-600">size-full as per viewport screen but you need to apply h-screen on its parent</div>
+
+    
+
+</body>
+</html>

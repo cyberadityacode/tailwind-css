@@ -1,0 +1,30 @@
+@import "tailwindcss";
+/* old CSS pattern code works here */
+@layer base{
+    h1{
+        font-size: 32px;
+    }
+    p{
+        font-style: italic;
+    }
+    aditya{
+        font-family: cursive;
+        background-color: yellow;
+    }
+}
+
+/* want to use tailwindcss ? */
+@layer base{
+    h2 {
+        @apply text-5xl;
+    }
+    cyberaditya{
+        @apply text-2xl bg-yellow-100 font-sans m-10;
+    }
+}
+
+@layer components{
+    .primary-btn{
+        @apply bg-blue-500 text-white p-2 rounded hover:bg-blue-700;
+    }
+}

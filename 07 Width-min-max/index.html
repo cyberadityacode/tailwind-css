@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Width- max-min in tailwindcss</title>
+  </head>
+  <body>
+    <!--     
+    <h1 class="bg-pink-400">h1 Width-  max-min in tailwindcss</h1>
+    <div class="bg-blue-600">div Width-  max-min in tailwindcss</div>
+    
+     span occupies content width, not full width, because its display: inline by default
+    <span class="bg-gray-600">span Width-  max-min in tailwindcss</span>
+
+     -->
+    <!-- setting width w-50 means 200px  -->
+    <div class="bg-pink-400 w-50">Width Expert in tailwindcss</div>
+
+    <!-- max width of 200px -->
+    <div class="bg-amber-500 max-w-50">Setting max width of div</div>
+    <!-- min width of 200px, ie, it can exceed the width according to the 
+     behavior of its element type. but can not go less than the specified width -->
+    <div class="bg-amber-500 min-w-50 mr-4 mt-4">Setting min width of div</div>
+
+    <!-- 
+        range of width between 0 to 96- According to tailwindcss ver 3,
+        but, version 4 has dynamic range creation, ie, you can specify any number
+        it convert classes dynamically
+    -->
+    
+    <!-- lets consider an ex. for width and min-width -->
+
+    <div class="bg-purple-300 w-70 min-w-50 mr-7">Width and Min width example</div>
+
+    <!-- ie,  width of entire div is 70 but its content can't exceed 50 -->
+    <div class="bg-green-300 w-70 max-w-50 mr-7">Width and Max width example</div>
+
+    <!-- to allocated 100% width use w-full -->
+    <div class="bg-green-300 w-full">100%  Width</div>
+   
+    <!-- to allocated 50% width use w-1/2 -->
+    <div class="bg-blue-300 w-1/2 min-w-40">50%  Width</div>
+   
+    <!-- to allocated 33% width use w-1/3 , squeeze it and see the content expulls out-->
+    <div class="bg-blue-300 w-1/3">33.33%  Width</div>
+    <!--henceforth, use min width-->
+    <div class="bg-blue-200 w-1/3 min-w-30">33.33%  Width</div>
+
+
+    <!-- tailwind also have default width variable ex. w-xs extra small 320px -->
+    <div class="bg-yellow-200 w-xs">eXtra Small Width 320px</div>
+    <!-- tailwind also have default width variable ex. w-xl extra large 576px -->
+    <div class="bg-cyan-200 w-xl">eXtra large Width 576px</div>
+   
+    <!-- tailwind also have default width variable ex. w-2xl double extra large 672px -->
+    <div class="bg-cyan-700 w-2xl">double eXtra large Width 672px</div>
+
+    <!-- similarly you can do alteration in ranges as 3xl, 4xl, 5xl,6xl and 7xl (thala for a reason)  -->
+
+    <!-- interview question - 
+        What if we put width greater than max-width? Ans- max-width will be applicable not the width
+
+        specific width w-[10px]
+
+        In Tailwind CSS:
+
+        mx-auto means:
+
+
+        Part	Meaning
+        m	margin
+        x	x-axis (horizontal: left and right)
+        auto	automatic value (let browser center it)
+
+        This centers an element horizontally inside its parent
+         if the element has a fixed width or limited width.
+
+        Without a fixed width (w-64, w-1/2, etc.), mx-auto often won't visibly center,
+         because a w-full element already fills the parent!
+        
+    -->
+
+         <div class="w-64 bg-yellow-200 mx-auto">I am Horizontally Centered</div>
+
+
+<!-- width auto -->
+
+<!-- squeeze the width of browser than see the difference, 
+w-1/3 means element width is 33.33%, the content  inside the div will 
+try to adjust itself within the allocated width. if you force furthermore
+elements will expulls out of the div  
+-->
+         <div class="w-1/3 bg-green-300 p-2">
+            Small text = small box
+          </div>
+          <!-- 
+          but in the below ex. width is set to auto, 
+          which implies content width will be adjusted automatically
+          and it will not betray the div or leave the div even if you shrink the screen to an extreme
+          -->
+          <div class="w-auto bg-green-300 p-2">
+            A lot of text here, so I stretch more!
+          </div>
+  </body>
+</html>

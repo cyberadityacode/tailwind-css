@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="script.js" defer></script>
+    <title>The Shoe Company</title>
+  </head>
+  <!-- <body class="bg-black text-white"> -->
+  <body class="">
+    <header>
+        <nav id="main_nav" class="p-5 shadow md:flex md:items-center md:justify-between">
+            <div class="flex justify-between items-center">
+                <span class="text-2xl font-[Poppins] cursor-pointer">
+                    <img class="h-16 inline " src="images/logo.png" alt="">
+                </span>
+                <span  class="text-3xl cursor-pointer md:hidden block mx-2">
+                    <ion-icon id="hamburger-menu" name="menu"></ion-icon>
+                    <!-- <ion-icon name="close"></ion-icon> -->
+                </span>
+            
+            </div>
+            <ul class="hidden md:flex md:items-center z-[-1] md:z-auto md:static w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] ">
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-cyan-500 duration-500" href="#">Home</a> 
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-cyan-500 duration-500" href="how-it-works">How it Works?</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-cyan-500 duration-500" href="#about">About</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-cyan-500 duration-500" href="#testimonial">Testimonial</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-cyan-500 duration-500" href="#contact">Contact</a>
+                </li>
+            </ul>
+          </nav>
+    
+    </header>
+      
+      
+
+    <section id="hero" class="bg-[url(/images/background-road.png)] bg-no-repeat bg-cover md:bg-contain bg-right pt-32 max-w-[1440px]">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between max-w-6xl mx-auto px-12">
+        <h1 class="text-4xl md:text-6xl font-bold leading-snug  text-left">THE<br>SHOE<br> COMPANY</h1>
+      <div class="flex justify-center items-center w-full md:w-auto">
+        <img class=" w-[393px] md:w-[600px]" src="images/the-white-shoe-hero-image 1.png" alt="">
+      </div>
+      </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

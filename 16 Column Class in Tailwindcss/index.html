@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Column Class</title>
+</head>
+
+<body>
+    <!-- 
+    In TailwindCSS, columns is a utility class that controls how many columns your content is split into.
+It’s used for CSS multi-column layouts — like a newspaper style where text flows from one column into the next.
+
+The basic idea is:
+
+Instead of flexbox or grid, it uses the native CSS columns property.
+
+It’s super handy for auto-splitting text or items into multiple columns without writing complex layouts.
+    
+    -->
+<!-- <div class="columns-2">
+    <h1 class="bg-green-300">Heading 1</h1>
+    <h1 class="bg-yellow-200">Heading 2</h1>
+    <h1 class="bg-cyan-200">Heading 3</h1>
+    <h1 class="bg-cyan-800">Heading 4</h1>
+    <h1 class="bg-cyan-800">Heading 5</h1>
+</div> -->
+
+<!-- lets work with images -->
+ <!-- concern with using 4 images, is the readability on various screen size -->
+ <!-- <div class="columns-3">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+ </div> -->
+<!-- to address this challenge, lets create breakpoints for multiple screen sizes -->
+<!-- <div class="sm: columns-1 md:columns-2 lg:columns-3 xl:columns-3 ">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+</div> -->
+
+<!-- if you want to make auto-responsive -->
+<!-- 
+columns-3xs is NOT a "number of columns".
+It is a column width size!
+
+👉 It tells browser:
+
+“Make columns as narrow as 3xs size (very small) — 
+and automatically create as many columns as needed to fit the content.”
+
+Very short summary:
+
+columns-2	Fixed 2 columns always
+columns-3xs	Auto number of columns, each about 16rem wide
+
+You learned something very important!
+columns-2 = Fixed columns count.
+ columns-3xs = Fixed columns width, flexible column count.
+
+
+
+-->
+<!-- columns-3xs,columns-sm,columns-md, columns-lg etc  -->
+ <div class="columns-sm gap-0">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+    <img class="size-fit" src="kailash.jpg" alt="">
+ </div>
+
+</body>
+
+</html>
